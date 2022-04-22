@@ -468,6 +468,10 @@
     "source": "api-reference/index.md",
     "children": [
       {
+        "slug": "get_params",
+        "label": "get_params()"
+      },
+      {
         "slug": "get_url",
         "label": "get_url()"
       },

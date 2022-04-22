@@ -418,13 +418,12 @@ $ dvc stage add -n train \
                 python train_model.py 20200105 model.p
 ```
 
-`train_model.py` will include some code to open and parse the parameters:
+`train_model.py` can use the `dvc.api.get_params()` to parse the parameters:
 
 ```py
-import yaml
+import dvc.api
 
-with open("params.yaml", 'r') as fd:
-    params = yaml.safe_load(fd)
+params = dvc.api.get_params("train")
 
 seed = params['seed']
 lr = params['train']['lr']
